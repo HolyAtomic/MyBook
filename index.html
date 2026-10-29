@@ -15,5 +15,41 @@
         </div>
         <p class="font-semibold">Ma collection de livres</p>
     </header>
+<main class="w-full p-4">
+    <div class="mb-4">
+        <input 
+        type="text"
+        id="searching"
+        placeholder="Rechercher un livre...."
+        class="w-full p-2 mb-2 border rounded-xl"
+        >
+        <select name="sorting" id="sort" class="w-full p-2 mb-2 border rounded-xl">
+            <option value="title">Trier par titre</option>
+            <option value="author">Trier par auteur</option>
+            <option value="year">Trier par année</option>
+        </select>
+        <button id="open" type="button" class="w-full p-2 rounded bg-blue-900 text-white">+ Ajouter un livre</button>
+    </div>
+    <section id="booklist" class="bg-white p-4 rounded-2xl">
+        <h2 class="text-xl mb-2 p-2"> Ma Collection</h2>
+        <p id="empty" class="text-gray-500">Aucun livre dans votre collection</p>
+    <div id="bookcard" class="hidden bg-white p-4 rounded border">
+
+        <h3 id="book-title" class="text-xl font-bold mb-2"></h3>
+
+        <p id="book-author" class="mb-1"></p>
+
+        <p id="book-year" class="mb-1"></p>
+
+        <p id="book-genre" class="mb-1"></p>
+
+        <p id="book-description" class="mb-2"></p>
+
+        <p id="book-status"></p>
+
+  </div>
+    </section> 
+
+</main>
 </body>
 </html>
