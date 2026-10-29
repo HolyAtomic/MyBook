@@ -49,7 +49,36 @@
 
   </div>
     </section> 
-
+    <dialog id="book" class="w-11/12 p-4 rounded justify-center items-center">
+        <h2 class="text-xl font-bold mb-4">Ajouter un livre</h2>
+        <form id="bookform">
+            <!-- --------- -->
+            <label for="title">Titre</label>
+            <input type="text" id="title" required class="w-full p-2 mb-2 rounded border">
+            <!-- --------- -->
+            <label for="author">Auteur</label>
+            <input type="text" id="author" required class="w-full p-2 mb-2 rounded border">
+            <!-- --------- -->
+            <label for="year">Annee</label>
+            <input type="text" id="year" class="w-full p-2 mb-2 rounded border">
+            <!-- --------- -->
+            <label for="genre">Genre</label>
+            <input type="text" id="genre" required class="w-full p-2 mb-2 rounded border">
+            <!-- --------- -->
+            <label for="description">Description</label>
+            <input id="description" required class="w-full p-2 mb-2 rounded border">
+            <!-- --------- -->
+            <label for="status">Status</label>
+            <select id="status" class="w-full p-2 mb-2 rounded border text-black">
+                <option value="toread">A lire</option>
+                <option value="reading">En cours</option>
+                <option value="read">Lu</option>
+            </select>
+            <!-- --------- -->
+             <button type="submit" class="bg-blue-900 rounded p-2 mb-2 text-white">Ajouter</button>
+             <button type="button" id="close" class="bg-blue-900 rounded p-2 mb-2 text-white">Annuler</button>
+        </form>
+    </dialog>
 </main>
 </body>
 </html>
