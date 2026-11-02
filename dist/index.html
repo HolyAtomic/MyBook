@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBooks</title>
+  <script type="module" crossorigin src="/MyBook/assets/index-BHYiuMST.js"></script>
+  <link rel="stylesheet" crossorigin href="/MyBook/assets/index-CAEhBNt2.css">
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+    <header class="bg-blue-900 text-white p-4 flex justify-between items-center">
+        <h1 class="font-bold text-2xl">📚 MyBooks</h1>
+        <p>Ma collection de livres</p>
+    </header>
+
+    <main class="w-full p-4">
+
+        <div class="mb-4">
+            <input type="text" id="searching"
+                placeholder="Rechercher un livre..."
+                class="w-full p-2 mb-2 border rounded-xl">
+
+            <select id="sort" class="w-full p-2 mb-2 border rounded-xl">
+                <option value="title">Trier par titre</option>
+                <option value="author">Trier par auteur</option>
+                <option value="year">Trier par année</option>
+            </select>
+
+            <button id="open" type="button"
+                class="w-full p-2 rounded bg-blue-900 text-white">
+                + Ajouter un livre
+            </button>
+        </div>
+
+        <section id="booklist" class="mt-6">
+
+            <h2 class="text-xl mb-4">Ma collection</h2>
+
+            <p id="empty" class="text-gray-500">
+                Aucun livre dans votre collection.
+            </p>
+
+            <div id="books-container" class="flex flex-wrap gap-3"></div>
+
+        </section>
+        <template id="book-template">
+            <div class="book-card bg-white p-3 rounded-lg border mb-2 w-full sm:w-64">
+
+                <h3 class="book-title text-lg font-bold mb-2"></h3>
+
+                <p class="book-author text-sm mb-1"></p>
+                <p class="book-year text-sm mb-1"></p>
+                <p class="book-genre text-sm mb-1"></p>
+                <p class="book-description text-sm mb-2"></p>
+                <p class="book-status text-sm mb-3"></p>
+
+                <button type="button" class="edit-btn bg-blue-600 text-white p-2 rounded">
+                    Modifier
+                </button>
+
+                <button type="button" class="delete-btn bg-red-600 text-white p-2 rounded">
+                    Supprimer
+                </button>
+
+            </div>
+        </template>
+
+        <dialog id="book" class="w-11/12 max-h-[90vh] p-4 rounded-xl border-0 m-auto backdrop:bg-black/60 backdrop:backdrop-blur-sm">
+
+            <h2 class="text-xl font-bold mb-4">Ajouter un livre</h2>
+
+            <form id="bookform">
+
+                <label for="title">Titre *</label>
+                <input type="text" id="title" required
+                    class="w-full p-2 mb-2 rounded border">
+
+                <label for="author">Auteur *</label>
+                <input type="text" id="author" required
+                    class="w-full p-2 mb-2 rounded border">
+
+                <label for="year">Année</label>
+                <input type="number" id="year" min="1"
+                    class="w-full p-2 mb-2 rounded border">
+
+                <label for="genre">Genre</label>
+                <input type="text" id="genre"
+                    class="w-full p-2 mb-2 rounded border">
+
+                <label for="description">Description</label>
+                <textarea id="description"
+                    class="w-full p-2 mb-2 rounded border"></textarea>
+
+                <label for="status">Statut</label>
+                <select id="status"
+                    class="w-full p-2 mb-2 rounded border">
+                    <option value="toread">À lire</option>
+                    <option value="reading">En cours</option>
+                    <option value="read">Lu</option>
+                </select>
+
+                <button type="submit"
+                    class="bg-blue-900 rounded p-2 mb-2 text-white">
+                    Enregistrer
+                </button>
+
+                <button type="button" id="close"
+                    class="bg-gray-300 rounded p-2 mb-2">
+                    Annuler
+                </button>
+
+            </form>
+        </dialog>
+
+    </main>
+</body>
+</html>
